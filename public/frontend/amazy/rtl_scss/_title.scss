@@ -1,0 +1,101 @@
+.section__title {
+    h3 {
+        font-size: 30px;
+        font-weight: 700;
+        color: var(--text_color);
+        margin-bottom: 0;
+        @media #{$tab} {
+            font-size: 22px;
+        }
+    }
+}
+
+.title_link {
+    grid-gap: 15px;
+    white-space: nowrap;
+    .title_text {
+        font-size: 14px;
+        font-weight: 700;
+        color: var(--base_color);
+        text-transform: uppercase;
+        line-height: 1;
+    }
+    .title_icon {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: var(--base_color);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        color: $white;
+        font-size: 10px;
+    }
+}
+
+.section__title2 {
+    h3 {
+        font-size: 40px;
+        font-weight: 700;
+        color: var(--text_color);
+        margin-bottom: 0;
+        line-height: 1.38;
+        @media #{$tab} {
+            font-size: 25px;
+        }
+    }
+}
+
+.section__title4 {
+    .subheading_text {
+        display: block;
+        font-size: 16px;
+        color: var(--base_color);
+        font-weight: 700;
+        margin-bottom: 15px;
+    }
+    h3 {
+        font-size: 40px;
+        font-weight: 700;
+        color: var(--text_color);
+        margin-bottom: 9px;
+        line-height: 1.38;
+        span {
+            text-transform: uppercase;
+        }
+        @media #{$tab} {
+            font-size: 30px;
+        }
+        @media #{$medium_device} {
+            font-size: 30px;
+        }
+    }
+    p {
+        font-size: 16px;
+        font-weight: 500;
+        color: $home_body;
+    }
+    &.margin_50 {
+        margin-bottom: 47px;
+        @media #{$tab} {
+            margin-bottom: 30px;
+        }
+    }
+    &.margin_52 {
+        margin-bottom: 52px;
+        @media #{$tab} {
+            margin-bottom: 30px;
+        }
+    }
+    &.mb_42 {
+        margin-bottom: 42px;
+        @media #{$tab} {
+            margin-bottom: 30px;
+        }
+    }
+    &.mb_40 {
+        @media #{$tab} {
+            margin-bottom: 30px;
+        }
+    }
+}

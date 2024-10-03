@@ -1,0 +1,50 @@
+{
+    "name": "marcandreappel/laravel-backblaze-b2",
+    "type": "library",
+    "description": "Backblaze B2 Cloud Storage for PHP8+ & Laravel 8+",
+    "keywords": ["flysystem", "filesystem", "api", "backblaze", "laravel", "storage", "disks"],
+    "homepage": "https://github.com/marcandreappel/laravel-backblaze-b2",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Marc-André Appel",
+            "email": "marc-andre@appel.fun",
+            "homepage": "https://github.com/marcandreappel",
+            "role": "Maintainer"
+        },
+        {
+            "name": "Ramesh Mhetre",
+            "email": "mhetreramesh@gmail.com",
+            "homepage": "https://about.me/rameshmhetre",
+            "role": "Creator"
+        }
+    ],
+    "require": {
+        "php": "^8.0|^8.1",
+        "gliterd/backblaze-b2": ">=1.5.0",
+        "marcandreappel/flysystem-backblaze": "^2.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "MarcAndreAppel\\BackblazeB2\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "MarcAndreAppel\\BackblazeB2\\Tests\\": "tests"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "\\MarcAndreAppel\\BackblazeB2\\BackblazeB2ServiceProvider"
+            ]
+        }
+    },
+    "require-dev": {
+        "orchestra/testbench": "^v7.0"
+    }
+}

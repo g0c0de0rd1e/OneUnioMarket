@@ -1,0 +1,173 @@
+.prodcuts_area {
+    padding: 80px 0 80px 0;
+    @media #{$tab} {
+        padding: 41px 0 40px 0;
+    }
+    &.product_full_column {
+        @media #{$min_large} {
+            margin: 0 55px;
+        }
+    }
+    .product_category_chose {
+        @media #{$lg_device} {
+            margin-top: 4px;
+        }
+        @media #{$medium_device} {
+            margin-top: 0;
+        }
+        @media #{$tab} {
+            overflow: auto;
+            padding-top: 16px;
+            margin-top: 0;
+        }
+        .course_title {
+            margin-bottom: 15px;
+            svg {
+                margin-left: 10px;
+                color: var(--base_color);
+            }
+        }
+        .rating_lists {
+            li {
+                &:not(:last-child) {
+                    margin-bottom: 12px;
+                }
+            }
+            .ratings {
+                display: flex;
+                align-items: center;
+                i {
+                    font-size: 15px;
+                    color: #ffc107;
+                    margin-left: 4px;
+                    &.unrated {
+                        color: #ffc107;
+                        opacity: .3;
+                    }
+                }
+                span {
+                    font-size: 14px;
+                    font-weight: 500;
+                    color: $home_body;
+                    display: inline-block;
+                    margin-right: 11px;
+                }
+            }
+        }
+    }
+    .course_category_inner {
+        border: 1px solid var(--border_color);
+        padding: 25px 30px 30px 30px;
+        background-color: $white;
+        .single_pro_categry {
+            h4 {
+                font-size: 18px;
+                font-weight: 700;
+                border-bottom: 1px solid var(--border_color);
+                margin-bottom: 18px;
+                padding-bottom: 11px;
+                display: block;
+            }
+            .color_filter {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(30px, 1fr));
+                grid-gap: 10px;
+                padding: 0px;
+                margin-bottom: 30px;
+            }
+            .filter_wrapper {
+                padding-top: 5px;
+                #slider-range {
+                    background: #f1ece8;
+                    height: 6px;
+                    border-radius: 30px;
+                    border: 0;
+                    .ui-slider-range {
+                        background: var(--base_color);
+                    }
+                    .ui-slider-handle {
+                        width: 12px;
+                        height: 12px;
+                        border-radius: 50%;
+                        border: 1px solid var(--base_color) !important;
+                        background: #fff !important;
+                        top: -3px;
+                        &:focus {
+                            outline: none;
+                        }
+                    }
+                }
+                .prise_line {
+                    margin-top: 30px;
+                    overflow: hidden;
+                    span {
+                        font-size: 14px;
+                        font-weight: 500;
+                        color: $home_body;
+                        margin-left: 5px;
+                    }
+                    input {
+                        border: 0;
+                        font-size: 14px;
+                        color: var(--base_color);
+                        background: transparent !important;
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+    }
+    .box_header {
+        border-bottom: 1px solid var(--border_color);
+        padding-bottom: 15px;
+        margin-bottom: 30px;
+        h5 {
+            font-family: $font1;
+        }
+        .box_header_right {
+            @media #{$small_mobile} {
+                margin-top: 10px;
+            }
+            & .shorting_box {
+                &:first-child {
+                    @include ssm {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+    .grid_shorting_style {
+        margin-right: 1px;
+        .product_wized {
+            margin-left: -1px;
+            margin-top: -1px;
+        }
+    }
+}
+
+.Check_sidebar {
+    li {
+        &:not(:last-child) {
+            margin-bottom: 12px;
+        }
+    }
+}
+
+.prduct_showing_style {
+    margin-left: 3px;
+    li:not(:last-child) {
+        margin-left: 17px;
+    }
+    a {
+        color: var(--text_color);
+        opacity: .7;
+        padding: 0;
+        transition: all .3s ease-in-out;
+        &:hover,
+        &:focus {
+            opacity: 1;
+            color: var(--base_color)
+        }
+    }
+}

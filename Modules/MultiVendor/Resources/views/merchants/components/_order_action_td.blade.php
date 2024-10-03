@@ -1,0 +1,1 @@
+<a class="primary-btn radius_30px mr-10 fix-gr-bg order_all_details" data-id="{{$order_package->id}}" href="{{route('order.merchant_order_show_details', $order_package->id)}}"><i class="ti-details"></i>Details</a>

@@ -1,0 +1,13 @@
+{
+    "name": "MultiVendor",
+    "alias": "multivendor",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\MultiVendor\\Providers\\MultiVendorServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

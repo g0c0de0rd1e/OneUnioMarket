@@ -1,0 +1,99 @@
+.amazy_blog_section {
+    .amaz_pagination {
+        padding-top: 50px;
+        @media #{$tab} {
+            padding-top: 30px;
+        }
+    }
+}
+//amazy_blog_Widget
+.amazy_blog_Widget {
+    background: white;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, .06);
+    .thumb {
+        overflow: hidden;
+        display: block;
+        img {
+            width: 100%;
+            transition: 0.3s;
+            transform: scale(1);
+        }
+    }
+    .blog_content {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        justify-content: start;
+        align-items: start;
+        padding: 20px;
+        padding-bottom: 30px;
+        span {
+            font-size: 14px;
+            font-weight: 400;
+            color: $home_body;
+            display: block;
+            margin: 0 0 0 0;
+            font-family: $font1;
+        }
+        h4 {
+            font-size: 22px;
+            font-weight: 700;
+            transition: 0.3s;
+            color: var(--text_color);
+            line-height: 1.45;
+            max-width: 385px;
+            font-family: $font1;
+            margin: 28px 0 5px 0;
+            @include text_ellipsis(3);
+            @media #{$tab} {
+                font-size: 20px;
+            }
+            &:hover {
+                color: var(--base_color);
+            }
+        }
+        p {
+            font-size: 16px;
+            line-height: 1.63;
+            margin: 25px 0 39px 0;
+        }
+    }
+    &.style2 {
+        &.mb_55 {
+            @media #{$tab} {
+                margin-bottom: 35px;
+            }
+        }
+        .blog_content {
+            padding-top: 16px;
+            span {
+                font-size: 14px;
+            }
+            h4 {
+                font-size: 24px;
+                line-height: 1.33;
+                max-width: 100%;
+                margin: 7px 0 9px 0;
+                @media #{$lg_device} {
+                    font-size: 20px;
+                }
+                @media #{$tab} {
+                    font-size: 20px;
+                }
+                &:hover {
+                    color: var(--base_color);
+                }
+            }
+            p {
+                margin: 0px 0 23px 0;
+            }
+        }
+    }
+    &:hover {
+        .thumb {
+            img {
+                transform: scale(1.1);
+            }
+        }
+    }
+}

@@ -1,0 +1,48 @@
+{
+    "MultiVendor": {
+        "item_id": "36161207",
+	    "migration": [
+            "2020_12_31_052152_create_seller_accounts_table.php",
+            "2020_12_31_053135_create_seller_business_information_table.php",
+            "2020_12_31_053153_create_seller_bank_accounts_table.php",
+            "2020_12_31_053245_create_seller_warehouse_addresses_table.php",
+            "2020_12_31_053300_create_seller_return_addresses_table.php",
+            "2021_03_31_144111_create_seller_commissions_table.php",
+            "2021_04_11_171145_create_sub_sellers_table.php",
+            "2021_04_12_173028_create_sub_seller_accesses_table.php",
+            "2021_06_26_145008_create_seller_subcriptions_table.php",
+            "2021_10_30_154040_email_template_for_multivendor.php",
+            "2022_02_05_193256_add_notification_setting_for_multivendor.php",
+            "2021_10_30_183422_permission_for_multivendor.php",
+            "2021_10_30_191728_role_for_multivendor.php",
+            "2021_11_01_103053_sms_template_type_for_multivendor.php",
+            "2021_11_01_103347_sms_template_for_multivendor.php",
+            "2021_11_02_112411_email_template_type_for_multivendor.php",
+            "2022_01_12_203914_add_role_permission_to_multivendor_module.php",
+            "2022_02_16_174330_create_package_wise_seller_commisions_table.php",
+            "2022_02_16_183448_add_seller_commision_chart_of_account.php",
+            "2022_02_24_184058_rename_subseller_name_from_subsellar.php",
+            "2022_05_28_124453_add_subscription_type_field_to_seller_payment_info.php",
+            "2022_08_31_132235_backend_menu_multivendor.php",
+            "2022_09_15_173450_add_permission_menu_for_bulk_product_upload.php",
+            "2022_10_18_180910_follow_seller_table.php",
+            "2022_10_24_171609__add_permission_for_followers.php",
+            "2023_01_11_162827_add_seller-commisions_slug_collunm_table.php",
+            "2023_05_26_162132_add_new_row_in_seller_commissions_table.php"
+        ],
+        "names": [
+            
+        ],
+        "versions": [
+            "v1.9.5"
+        ],
+        "min_system_version":"3.7.5",
+        "verifier" : "uxauth",
+        "url": [
+            "https://spondonit.com/contact"
+        ],
+        "notes": [
+            "This is Multi Vendor Module for Amazcart. After install this module, system will converted to multi vendor ecommerce. Amazcart version required 3.7.5"
+        ]
+    }
+}

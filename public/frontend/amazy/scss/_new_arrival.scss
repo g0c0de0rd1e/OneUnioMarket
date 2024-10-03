@@ -1,0 +1,19 @@
+.custom_nav {
+    li {
+        &:not(:last-child) {
+            margin-right: 50px;
+            @media #{$tab} {
+                margin-right: 15px;
+            }
+        }
+        a {
+            font-size: 14px;
+            font-weight: 500;
+            color: #676e8b;
+            padding: 4px 0 0 0;
+            &.active {
+                color: #fd1c5e;
+            }
+        }
+    }
+}

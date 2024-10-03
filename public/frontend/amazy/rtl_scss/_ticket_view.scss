@@ -1,0 +1,17 @@
+.ticket_view_box {
+    padding: 25px 25px 30px 25px;
+}
+// user_wrapper_lists
+.user_wrapper_lists {
+    .user_wrapper_list {
+        grid-gap: 12px;
+        border-bottom: 1px solid #eef0f4;
+        padding: 20px 0;
+        &:first-child {
+            border-top: 1px solid #eef0f4;
+        }
+        .user_wrapper_left {
+            flex: 66px 0 0;
+        }
+    }
+}

@@ -1,0 +1,121 @@
+$light: #d9dcec;
+$star: #ffc107;
+$white: #ffffff;
+
+// Review section style
+.product_description_container{
+    overflow: hidden;
+    transition: height 0.5s ease-in-out;
+    max-height: 300px;
+
+    &.short_description{
+        position: relative;
+        &::after{
+            content: "";
+            height: 100px;
+            position: absolute;
+            bottom: 0px;
+            width: 100%;
+            left: 0;
+            background: linear-gradient(-180deg,hsla(0,0%,100%,0) 6%,#fff 83%);
+        }
+    }
+}
+
+.show_full_btn {
+    vertical-align: bottom;
+    background: $white;
+    text-align: center;
+
+    #show_full_details{
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+.rating_filter_area{
+    display: flex;
+    gap: 10px;
+    font-weight: 400;
+    border-bottom: 1px solid var(--border_color);
+    margin-bottom: 30px;
+    padding: 20px 0;
+    flex-wrap: wrap;
+    .single_filter{
+        flex-basis: 1;
+        button{
+            border: 1px solid $light;
+            background: $white;
+            padding: 6px 4px;
+            min-width: 60px;
+
+            &:hover{
+                border-color: var(--base_color);
+            }
+
+
+            &.active{
+                border-color: var(--base_color);
+                background: var(--base_color_10);
+                .value{
+                    color:  var(--base_color);
+                }
+            }
+
+            i{
+                color: $star;
+            }
+            .value{
+                color: var(--text_color);
+            }
+        }
+    }
+}
+
+.review_img_div{
+    img{
+        object-fit: cover;
+        border-radius: 6px;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.review_video_item{
+    a{
+        position: relative;
+        width: 100%;
+        &::before{
+            content: '\f04b';
+            height: 40px;
+            width: 40px;
+            border-radius: 100%;
+            background: var(--base_color_10);
+            color: var(--base_color_60);
+            font-size: 16px;
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            display: block;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            pointer-events: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        img{
+            object-fit: cover;
+            border-radius: 6px;
+            width: 100%;
+            height: 100%;
+        }
+
+        &:hover{
+            &::before{
+                background: var(--base_color_20);
+            }
+        }
+    }
+}

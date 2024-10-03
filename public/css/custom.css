@@ -1,0 +1,119 @@
+.gap-10{
+    gap: 10px;
+}
+
+select#country + .nice-select .list{
+    color: #687083;
+}
+select#state + .nice-select .list{
+    color: #687083;
+}
+select#city + .nice-select .list{
+    color: #687083;
+}
+
+
+@media (max-width: 991px){
+
+    .summery_pro_content h4{
+        -webkit-line-clamp: 1!important;
+                line-clamp: 1!important;
+    }
+
+    .amazy_table4_body .list-group-item .row > div{
+        max-width: 100%;
+    }
+    .product_number_count.style_4 .count_single_item{
+        width: 30px;
+        height: 30px;
+    }
+    .product_number_count .count_single_item.input-number{
+        width: 30px!important;
+    }
+    .cart_thumb_div{
+        width: 100%!important;
+        max-width: 100%!important;
+    }
+    .cart_thumb_div {
+        --thum-width: 60px;
+    }
+    .cart_thumb_div .summery_pro_content h4{
+        max-width: 100%;
+        width: 100%;
+        white-space: nowrap;
+    }
+    .cart_thumb_div .summery_pro_content{
+        max-width: calc(100% - var(--thum-width) - 40px)!important;
+    }
+    .list-group-item{
+        position: relative;
+    }
+    .list-group-item .text-end{
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    /* Checkout page */
+
+    .checout_shiped_products table .cart_thumb_div .summery_pro_content {
+        max-width: calc(100% - var(--thum-width))!important;
+    }
+
+    .checout_shiped_products table .summery_pro_content{
+        min-width: 100px;
+    }
+    .checout_shiped_products {
+        padding-left: 0!important;
+        padding-right: 0!important;
+    }
+    .checout_head_title span{
+        padding: 8px!important;
+    }
+    .checout_shiped_products table tr td{
+        padding: 8px!important;
+    }
+    .checout_shiped_products table tr td:nth-child(3) h4{
+        padding-left: 10px;
+        font-size: 16px;
+    }
+    #back-top {
+    bottom: 65px;
+    }
+}
+
+
+@media (max-width: 480px){
+    .checout_shiped_products table  .cart_thumb_div {
+        --thum-width: 40px;
+    }
+    .checkout_v3_left{
+        padding: 15px;
+        padding-bottom: 50px;
+    }
+    .checout_shiped_products table .summery_pro_content{
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+}
+
+/* Product details page */
+
+.product_number_count .count_single_item{
+    height: 30px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product_number_count .count_single_item.input-number{
+    width: 40px;
+}
+
+@media (max-width: 480px){
+    #add_to_cart_div > *{
+        padding: 5px;
+    }
+}

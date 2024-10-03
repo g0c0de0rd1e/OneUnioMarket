@@ -1,0 +1,269 @@
+.dashboard_bg {
+    background: #f5f8fa;
+}
+
+.dashboard_sidebar_wized {
+    border-right: 1px solid #e3e6ef;
+    @include mmd {
+        margin-bottom: 30px;
+    }
+    .dashboard_sidebar_wized_user {
+        border-bottom: 1px solid #e3e6ef;
+        h4 {
+            margin: 23px 0 5px 0;
+        }
+        .user_desc {
+            display: flex;
+            align-items: center;
+            grid-gap: 19px;
+            margin-bottom: 30px;
+            .email_text {
+                &::before {
+                    content: "";
+                    position: absolute;
+                    right: -10px;
+                    height: 13px;
+                    width: 1px;
+                    background: #e3e3e3;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+            }
+        }
+    }
+    .dashboard_sidebar_balance_lists {
+        .dashboard_sidebar_balance_list {
+            padding-left: 15px;
+            &::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 5px;
+                width: 5px;
+                height: 5px;
+                border-radius: 50%;
+                background: $body_text;
+            }
+            .dashboard_sidebar_balance_list_left {
+                h5 {
+                    margin-bottom: 1px;
+                }
+            }
+        }
+    }
+    .dashboard_sidebar_balance {
+        background: $white;
+        padding: 30px;
+        margin-bottom: 19px;
+        border-bottom: 1px solid #e3e6ef;
+    }
+}
+
+// dashboard_sidebar_menuList
+.dashboard_sidebar_menuList {
+    ul {
+        li {
+            .amazy_bb2 {
+                margin: 27px 0 17px 0;
+            }
+            a {
+                font-size: 14px;
+                font-weight: 500;
+                color: var(--text_color);
+                grid-gap: 15px;
+                padding: 10px 0;
+                svg {
+                    path {
+                        transition: 0.3s;
+                        fill: var(--text_color);
+                    }
+                }
+                &:hover,
+                &.active {
+                    color: var(--base_color);
+                    svg {
+                        path {
+                            fill: var(--base_color) !important;
+                        }
+                    }
+                }
+                &.active::before {
+                    content: "";
+                    position: absolute;
+                    right: 0;
+                    height: 14px;
+                    width: 2px;
+                    background: var(--base_color);
+                    border-radius: 5px 0 0 5px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+            }
+        }
+    }
+}
+
+// dashBoard_cart_boxs
+.dashBoard_cart_boxs {
+    display: grid;
+    // grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(158px, 1fr));
+    grid-gap: 20px;
+    .single_cart_box {
+        border-radius: 10px;
+        background-color: #fff;
+        padding: 30px 30px 29px 30px;
+        transition: 0.3s;
+        .icon {
+            width: 65px;
+            height: 65px;
+            background-color: #f6f8fa;
+            border-radius: 50%;
+            transition: 0.3s;
+        }
+        span {
+            margin: 20px 0 4px 0;
+            white-space: nowrap;
+        }
+        &:hover {
+            background: var(--base_color);
+            span,
+            h3 {
+                color: $white;
+            }
+            .icon {
+                background: #f6f8fa;
+            }
+        }
+    }
+}
+
+.dashboard_white_box {
+    border-radius: 5px;
+    padding: 20px 30px 30px 30px;
+    &.style2 {
+        padding: 30px;
+    }
+    &.style3 {
+        padding: 30px 30px 36px 30px;
+    }
+    &.style4 {
+        padding: 60px;
+        @media #{$tab} {
+            padding: 30px;
+        }
+    }
+    &.style5 {
+        padding: 40px;
+        @media #{$tab} {
+            padding: 30px;
+        }
+    }
+    &.style6 {
+        padding: 40px 50px 45px 50px;
+        @media #{$tab} {
+            padding: 20px;
+        }
+    }
+}
+
+.white_box {
+    border-radius: 0px;
+    .white_box_header {
+        padding: 14px 30px;
+    }
+    .dashboard_white_box_body {
+        padding: 10px 30px 30px 30px;
+    }
+    &.style2 {
+        .dashboard_white_box_body {
+            padding: 30px 30px 30px 30px;
+        }
+    }
+}
+
+.dashboard_order_list {
+    padding: 15px 0 0 0;
+    --thum: 120px;
+    &:not(:last-child) {
+        border-bottom: 1px dashed $border_2;
+        padding: 15px 0;
+    }
+    .thumb {
+        max-width: var(--thum);
+        min-width: var(--thum);
+        flex: 0 0 100%;
+    }
+    .dashboard_order_content {
+        max-width: calc(100% - var(--thum) - 20px);
+        flex: 0 0 100%;
+        h4 {
+            @include text_ellipsis(2);
+            &:hover {
+                color: var(--base_color);
+            }
+        }
+    }
+}
+
+
+/* -------------------------------------------------------------------------- */
+
+
+/*                                    order                                   */
+
+
+/* -------------------------------------------------------------------------- */
+
+.amazy_order_tabs {
+    .nav-item {
+        background-color: #fff;
+        &:not(:last-child) {
+            .nav-link::before {
+                content: "";
+                position: absolute;
+                right: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                height: 8px;
+                width: 1px;
+                background: #f1ece8;
+            }
+        }
+        .nav-link {
+            border-radius: 3px;
+            background-color: #fff;
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--text_color);
+            border: 0;
+            position: relative;
+            padding: 9.5px 15.5px;
+            &.active {
+                color: var(--base_color);
+            }
+        }
+    }
+}
+
+.amazy_dashboard_area {
+    padding: 50px 0 70px 0;
+    @media #{$medium_device} {
+        padding: 30px 0 50px 0;
+    }
+    @media #{$tab} {
+        padding: 30px 0 50px 0;
+    }
+}
+
+.dashboard_white_box_header {
+    & .amaz_select3 {
+        min-width: 220px;
+        margin-left: auto;
+    }
+    & h3.font_20.f_w_700.mb-0 {
+        @media #{$tab} {
+            font-size: 18px;
+        }
+    }
+}

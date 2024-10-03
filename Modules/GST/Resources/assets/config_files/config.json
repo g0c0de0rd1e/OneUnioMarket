@@ -1,0 +1,10 @@
+{
+    "enable_gst": "gst",
+    "within_a_single_state": [
+        "1"
+    ],
+    "between_two_different_states_or_a_state_and_a_Union_Territory": [
+        "2"
+    ],
+    "flat_tax_id": "1"
+}

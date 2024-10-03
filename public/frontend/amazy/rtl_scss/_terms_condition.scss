@@ -1,0 +1,41 @@
+.terms_condition_wrapper {
+    padding: 91px 0 96px 0;
+    @media #{$tab} {
+        padding: 70px 0;
+    }
+    .single_terms_condition {
+        &:not(:last-child) {
+            margin-bottom: 47px;
+            @media #{$tab} {
+                margin-bottom: 30px;
+            }
+        }
+        .condition_description {
+            font-size: 16px;
+            line-height: 1.5;
+            font-weight: 400;
+            color: $home_body;
+        }
+        .non_returnable_list {
+            li {
+                font-size: 16px;
+                line-height: 1.88;
+                font-weight: 400;
+                color: $home_body;
+                position: relative;
+                padding-right: 15px;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    background: $home_body;
+                    width: 5px;
+                    height: 5px;
+                    border-radius: 50%;
+                    right: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+            }
+        }
+    }
+}

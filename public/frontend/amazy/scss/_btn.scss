@@ -1,0 +1,622 @@
+        .theme_btn {
+            background: var(--text_color)4;
+            @include border-radius(5px);
+            display: inline-block;
+            font-family: $font1;
+            font-size: 14px;
+            color: $white;
+            font-weight: 500;
+            padding: 13.5px 47px;
+            border: 1px solid transparent;
+            text-transform: capitalize;
+            display: inline-block;
+            transition: 0.3s;
+            cursor: pointer;
+            &.small_btn {
+                padding: 13.5px 25px;
+            }
+            &.large_btn {
+                padding: 18.5px 30px;
+            }
+            &.small_btn2 {
+                padding: 13.5px 39px;
+            }
+            &.small_btn3 {
+                padding: 13.5px 32px;
+            }
+            &.small_btn4 {
+                padding: 11px 21px;
+            }
+            &.small_btn5 {
+                padding: 8.5px 20px;
+            }
+            @media #{$small_mobile} {
+                padding: 15px 16px;
+            }
+            &.green_btn {
+                background: #54c254 !important;
+                padding: 8.5px 18px;
+                color: #fff !important;
+                border-color: #54c254 !important;
+                font-size: 16px;
+            }
+            &.width_120px {
+                width: 120px;
+                padding: 13.5px 7px;
+                text-align: center;
+            }
+            &.width_210px {
+                min-width: 210px;
+                padding: 13.5px 20px;
+                text-align: center;
+            }
+            &:hover {
+                color: var(--text_color)4;
+                border-color: var(--text_color)4;
+                background: transparent;
+            }
+        }
+        .yellow_btn {
+            background: #fec801;
+            @include border-radius(0px);
+            display: inline-block;
+            font-family: $font1;
+            font-size: 14px;
+            color: var(--base_color);
+            font-weight: 700;
+            padding: 18.5px 31px;
+            border: 1px solid transparent;
+            text-transform: uppercase;
+            display: inline-block;
+            transition: 0.3s;
+            cursor: pointer;
+            @media #{$small_mobile} {
+                padding: 13px 30px;
+            }
+            &:hover {
+                color: #fec801;
+                border-color: #fec801;
+                background: transparent;
+            }
+        }
+
+        .line_btn {
+            display: inline-flex;
+            align-items: center;
+            color: $home_primary4;
+            font-size: 14px;
+            font-weight: 500;
+            &:hover {
+                color: $home_primary4;
+            }
+        }
+
+        // home10 btns
+        .home10_primary_btn {
+            @include border-radius(0px);
+            display: inline-block;
+            font-family: $font1;
+            font-size: 14px;
+            color: var(--text_color);
+            font-weight: 700;
+            padding: 13.5px 23px;
+            border: 1px solid #272727;
+            text-transform: uppercase;
+            display: inline-block;
+            transition: 0.3s;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            @media #{$small_mobile} {
+                padding: 12px 18px;
+            }
+            img {
+                margin-left: 19px;
+                position: relative;
+                left: 0;
+                transition: 0.3s;
+            }
+            &.large_btn {
+                padding: 13.5px 28px;
+                @media #{$small_mobile} {
+                    padding: 12px 18px;
+                }
+                &:hover {
+                    color: $white;
+                    background: var(--text_color);
+                }
+            }
+            &.small_btn {
+                padding: 13.5px 25px;
+            }
+            &:hover {
+                color: var(--text_color);
+                img {
+                    left: 2px;
+                }
+            }
+        }
+
+        .home10_primary_btn2 {
+            background: var(--base_color);
+            @include border-radius(5px);
+            display: inline-block;
+            font-family: $font1;
+            font-size: 14px;
+            color: $white;
+            font-weight: 500;
+            padding: 13.5px 47px;
+            border: 1px solid transparent;
+            text-transform: capitalize;
+            display: inline-block;
+            transition: 0.3s;
+            cursor: pointer;
+            @media #{$small_mobile} {
+                padding: 12px 25px;
+            }
+            &.small_btn {
+                padding: 8.5px 23px;
+            }
+            &.large_btn {
+                padding: 18.5px 47px;
+                @media #{$small_mobile} {
+                    padding: 14px 25px;
+                }
+            }
+            &.min_160px {
+                min-width: 160px;
+                text-align: center;
+                padding: 13.5px 0px;
+            }
+            &.min_180px {
+                min-width: 180px;
+                text-align: center;
+                padding: 13.5px 0px;
+                font-weight: 700;
+            }
+            &.f_w_700 {
+                font-weight: 700;
+            }
+            &:hover {
+                color: var(--base_color);
+                border-color: var(--base_color);
+                background: transparent;
+            }
+        }
+
+        .home10_primary_btn4 {
+            @include border-radius(2px);
+            display: inline-block;
+            font-family: $font1;
+            font-size: 14px;
+            color: var(--base_color);
+            font-weight: 700;
+            padding: 13.5px 32px;
+            border: 1.5px solid var(--base_color);
+            text-transform: capitalize;
+            display: inline-block;
+            transition: 0.3s;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            &.radius_5px {
+                @include border-radius(5px);
+            }
+            &.small_btn {
+                padding: 6px 14px 4px 14px;
+                font-size: 12px;
+            }
+            @media #{$small_mobile} {
+                padding: 12px 18px;
+            }
+            &.min_180px {
+                min-width: 180px;
+                text-align: center;
+                padding: 13.5px 10px;
+                font-weight: 700;
+            }
+            &:hover {
+                color: $white;
+                background: var(--base_color);
+                border-color: var(--base_color);
+            }
+        }
+
+        // home
+        .amaz_primary_btn {
+            background: var(--base_color);
+            @include border-radius(0px);
+            display: inline-block;
+            font-family: $font1;
+            font-size: 14px;
+            color: $white;
+            font-weight: 700;
+            padding: 18.5px 24px;
+            border: 1px solid transparent;
+            text-transform: uppercase;
+            display: inline-block;
+            transition: 0.3s;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            @media #{$tab} {
+                padding: 13.5px 20px;
+            }
+            &.small_btn {
+                padding: 8.5px 14px;
+                min-width: 100px;
+                font-size: 14px;
+            }
+            &.style2 {
+                padding: 14.5px 24px 12.5px 24px;
+            }
+            &.style3 {
+                padding: 10px 15px 7px 15px;
+                min-width: 100px;
+            }
+            &.style4 {
+                padding: 10px 15px 7px 15px;
+                min-width: 100px;
+            }
+            &.style5 {
+                padding: 14.5px 24px 12.5px 24px;
+                min-width: 120px;
+            }
+            &.style6 {
+                padding: 16.5px 24px 15.5px 24px;
+            }
+            &.style7 {
+                padding: 10px 15px 7px 15px;
+                min-width: 109px;
+            }
+            &.style8 {
+                padding: 4px 9px 3px 9px;
+            }
+            &.gray_bg_btn {
+                background-color: #f5f8fa;
+                color: var(--text_color);
+                padding: 11px 15px;
+            }
+            &.min_200 {
+                min-width: 200px;
+                text-align: center;
+            }
+            &.min_220 {
+                min-width: 220px;
+            }
+            &.min_160 {
+                min-width: 160px;
+                text-align: center;
+            }
+            &.min_100 {
+                min-width: 100px;
+                text-align: center;
+            }
+            &.min_180 {
+                min-width: 180px;
+                text-align: center;
+            }
+            &.radius_5px {
+                @include border-radius(5px);
+            }
+            &.radius_3px {
+                @include border-radius(3px);
+            }
+            &:hover {
+                color: $white;
+                border-color: var(--text_color);
+                background: var(--text_color);
+            }
+        }
+
+        .amaz_primary_btn2 {
+            background: $white;
+            @include border-radius(0px);
+            display: inline-block;
+            font-family: $font1;
+            font-size: 14px;
+            color: var(--base_color);
+            font-weight: 700;
+            padding: 17.5px 24px;
+            border: 2px solid var(--base_color);
+            text-transform: uppercase;
+            display: inline-block;
+            transition: 0.3s;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            @media #{$tab} {
+                padding: 13.5px 20px;
+            }
+            &.small_btn {
+                padding: 8.5px 14px;
+                min-width: 100px;
+                font-size: 14px;
+            }
+            &.style2 {
+                padding: 12.5px 24px;
+            }
+            &.style3 {
+                border: 1.5px solid var(--base_color);
+                padding: 13.5px 24px;
+            }
+            &.radius_5px {
+                @include border-radius(5px);
+            }
+            &.min_200 {
+                min-width: 200px;
+                text-align: center;
+            }
+            &.min_160 {
+                min-width: 160px;
+                text-align: center;
+            }
+            &.min_180 {
+                min-width: 180px;
+                text-align: center;
+            }
+            &:hover {
+                color: $white;
+                border-color: var(--base_color);
+                background: var(--base_color);
+            }
+        }
+
+        .amaz_primary_btn3 {
+            @include border-radius(0px);
+            display: inline-block;
+            font-family: $font1;
+            font-size: 14px;
+            color: var(--base_color);
+            font-weight: 700;
+            padding: 14px 32px 13px 32px;
+            border: 1px solid var(--base_color);
+            text-transform: capitalize;
+            display: inline-block;
+            transition: 0.3s;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            background: $white;
+            &.round_style {
+                @include border-radius(30px);
+                padding: 4px 10px 3px 10px;
+            }
+            &.radius_5px {
+                @include border-radius(5px);
+            }
+            &.small_btn {
+                padding: 6px 14px 4px 14px;
+                font-size: 12px;
+            }
+            @media #{$small_mobile} {
+                padding: 12px 18px;
+            }
+            &.min_180px {
+                min-width: 180px;
+                text-align: center;
+                padding: 13.5px 10px;
+                font-weight: 700;
+            }
+            &.min_140 {
+                min-width: 140px;
+            }
+            &:hover {
+                color: $white;
+                background: var(--base_color);
+                border-color: var(--base_color);
+            }
+        }
+
+        .amazy_readMore_link {
+            display: inline-block;
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 1.29;
+            color: var(--text_color);
+            position: relative;
+            text-transform: uppercase;
+            &::before {
+                content: "";
+                position: absolute;
+                height: 5px;
+                background: var(--base_color_10);
+                bottom: -5px;
+                left: 0;
+                right: -5px;
+                transition: 0.3s;
+            }
+            &:hover {
+                color: var(--base_color);
+                &::before {
+                    background: var(--base_color);
+                }
+            }
+        }
+
+        // dashboard elements
+        .amaz_badge_btn {
+            padding: 5px 11px 4px 11px;
+            display: inline-block;
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--base_color);
+            background: var(--base_color_10);
+            border-radius: 5px;
+            &:hover {
+                background: var(--base_color);
+                color: $white;
+            }
+        }
+
+        .amaz_badge_btn2 {
+            padding: 5px 10px 4px 11px;
+            display: inline-block;
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--text_color);
+            background: #f5f8fa;
+            border-radius: 3px;
+            &:hover {
+                background: var(--base_color);
+                color: $white;
+            }
+        }
+
+        .amaz_badge_btn3 {
+            padding: 5px 10px 4px 11px;
+            display: inline-block;
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--base_color);
+            background: var(--base_color_10);
+            border-radius: 3px;
+            &:hover {
+                background: var(--base_color);
+                color: $white;
+            }
+        }
+
+        .amaz_badge_btn4 {
+            padding: 5px 15.5px 4px 15.5px;
+            display: inline-block;
+            font-size: 14px;
+            font-weight: 500;
+            color: $body_text;
+            border-radius: 3px;
+            background-color: #f5f8fa;
+            &:hover {
+                background: var(--base_color);
+                color: $white;
+            }
+        }
+
+        .amaz_badge_btn6 {
+            padding: 9px 11px 8px 11px;
+            display: inline-block;
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--base_color);
+            border-radius: 3px;
+            background-color: var(--base_color_10);
+            &:hover {
+                background: var(--base_color);
+                color: $white;
+            }
+        }
+
+        .amaz_badge_btn7 {
+            padding: 5px 15px 4px 15px;
+            display: inline-block;
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--base_color);
+            border-radius: 3px;
+            background-color: var(--base_color_10);
+            &:hover {
+                background: var(--base_color);
+                color: $white;
+            }
+        }
+
+        .table_badge_btn {
+            padding: 3.5px 16px;
+            display: inline-block;
+            font-size: 12px;
+            font-weight: 700;
+            color: #fec600;
+            background-color: #fff8dd;
+            border-radius: 3px;
+            &.style2 {
+                color: #199ef7;
+                background-color: #ebf8ff;
+                &:hover {
+                    background: #199ef7;
+                    color: $white;
+                }
+            }
+            &.style3 {
+                color: #f1416c;
+                background-color: #fff5f8;
+                &:hover {
+                    background: #f1416c;
+                    color: $white;
+                }
+            }
+            &.style4 {
+                color: #50cd89;
+                background-color: #e7fff3;
+                &:hover {
+                    background: #e7fff3;
+                    color: var(--text_color);
+                }
+            }
+            &:hover {
+                background: #fec600;
+                color: $white;
+            }
+        }
+
+        .line_badge_btn {
+            padding: 4px 16px 3px 16px;
+            display: inline-block;
+            font-size: 14px;
+            font-weight: 700;
+            border-radius: 30px;
+            border: 1px solid var(--base_color);
+            min-width: 96px;
+            color: var(--base_color);
+            &:hover {
+                background: var(--base_color);
+                border-color: var(--base_color);
+                color: $white;
+            }
+        }
+
+        .line_badge_btn2 {
+            padding: 4px 16px 3px 16px;
+            display: inline-block;
+            font-size: 14px;
+            font-weight: 700;
+            border-radius: 30px;
+            border: 1px solid #eef0f4;
+            min-width: 96px;
+            color: $body_text;
+            background: #fcfdfd;
+            &:hover {
+                background: var(--base_color);
+                border-color: var(--base_color);
+                color: $white;
+            }
+        }
+
+        .line_badge_btn3 {
+            border-radius: 5px;
+            padding: 7px 14px;
+            transition: 0.3s;
+            display: inline-block;
+        }
+
+        .amazy_status_btn {
+            border-radius: 5px;
+            border: 1px solid var(--border_color);
+            background-color: #f9f9fd;
+            width: 30px;
+            height: 30px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0;
+        }
+
+        .green_badge {
+            font-size: 14px;
+            font-weight: 700;
+            color: $white;
+            background-color: #29c489;
+            border-radius: 3px;
+            padding: 2px 9px;
+            display: inline-block;
+        }

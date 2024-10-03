@@ -1,0 +1,132 @@
+.slider-for .slick-slide {
+    display: none;
+}
+
+.slider-for .slick-slide.slick-active {
+    display: block;
+    left: 0px!important;
+}
+
+html[dir=rtl] .slider-for .slick-slide.slick-active {
+    left: auto !important;
+    right: 0 !important;
+}
+
+.img_div_width {
+    width: 306px;
+    align-items: center;
+    grid-gap: 10px;
+    padding: 0px 0px 10px 8px;
+}
+
+html[dir=rtl] .img_div_width {
+    padding: 0px 8px 10px 0;
+}
+
+.sku_img_div {
+    background: #f7f7f7;
+    width: 65px;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.sku_img_div img {
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+    object-fit: cover;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.var_img_source {
+    max-width: 95%;
+    max-height: 80px!important;
+}
+
+
+/* .slider-nav .slick-list .slick-track {
+    display: flex;
+    left: 0 !important;
+    justify-content: flex-start;
+    width: 100% !important;
+    max-width: 100%;
+} */
+
+.slick-track {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.product_details iframe {
+    width: 100%;
+    min-height: 445px;
+}
+
+@media (max-width: 767.98px) {
+    .product_details_dec {
+        margin-top: 30px;
+        margin-bottom: 30px!important;
+    }
+    .product_details_dec .product_details_dec_body {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 540px) {
+    .product_details iframe {
+        min-height: 190px;
+    }
+}
+
+.review_file {
+    /* display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); */
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.amaz_select2 .current {
+    text-overflow: ellipsis;
+    max-width: 95%;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.sku_img_div.active {
+    background: var(--base_color);
+}
+
+.img_div_width {
+    z-index: 0;
+}
+
+.sku_img_div>* {
+    padding: 2px !important;
+}
+
+.zoomWindowContainer div {
+    height: 100% !important;
+    width: 750px !important;
+}
+
+.tag_link {
+    background-color: #eee;
+    padding: 0px 8px;
+    border-radius: 4px;
+    margin: 3px 0px;
+    display: inline-block;
+}
+
+.tag_link:hover {
+    color: #fff !important;
+    background-color: var(--base_color);
+}

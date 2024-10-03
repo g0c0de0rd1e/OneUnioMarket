@@ -1,0 +1,675 @@
+@import 'media';
+@import 'variables';
+// caret
+:root {
+    --right: 38px;
+    --main-width: 400px;
+    @include mmd {
+        --right: 12px;
+    }
+}
+
+#main-content {
+    @include mmd {
+        padding: 0;
+        padding-top: 68px;
+    }
+}
+
+.header_iner {
+    box-shadow: 0 0 0 !important;
+}
+
+@mixin text_ellipsis($count) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: $count;
+    line-clamp: $count;
+    -webkit-box-orient: vertical;
+}
+
+.text-primary {
+    color: var(--base_color) !important;
+}
+
+.bg-primary {
+    background-color: var(--base_color) !important;
+}
+
+.chat {
+    --padding: 30px;
+    background-color: #E0EEF1;
+    position: relative;
+    z-index: 1;
+    // height: 100vh;
+    @include xl {
+        --padding: 20px;
+    }
+    @include mmd {
+        --padding: 20px;
+    }
+    &-px-mobile {
+        @include sm {
+            padding-left: 0;
+            padding-right: 0;
+            overflow: hidden;
+        }
+    }
+    &-close {
+        position: fixed;
+        font-size: 10px;
+        width: 20px;
+        height: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        border-radius: 4px;
+        left: 5px;
+        margin-top: 5px;
+        z-index: 6;
+    }
+    &-footer {
+        background-color: #F0FBFD;
+        border: 1px solid #ECECEC;
+        padding: 21px 23px;
+        @include xl {
+            padding: 18px 20px;
+        }
+        @include lg {
+            padding: 20px;
+        }
+        @include mmd {
+            padding: 12px 20px;
+        }
+        &>button {
+            margin-left: 18px;
+        }
+        & button {
+            font-size: 22px;
+            color: #454A4D;
+            @include mmd {
+                font-size: 20px;
+            }
+        }
+        & .form {
+            &-box {
+                overflow: hidden;
+                flex: 0 0 auto;
+                width: 100%;
+                max-width: 86%;
+                margin-right: 14px;
+                @include xxl {
+                    max-width: 76%;
+                }
+                @include xl {
+                    max-width: 82%;
+                }
+                @include lg {
+                    max-width: 72%;
+                }
+                @include md {
+                    max-width: 70%;
+                }
+                @include sm {
+                    max-width: 75%;
+                }
+                & button {
+                    background-color: var(--base_color) !important;
+                    padding: 0 16px;
+                    color: $white;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-top-right-radius: 8px;
+                    border-bottom-right-radius: 8px;
+                    transform: scaleX(-1);
+                }
+            }
+            &-control {
+                box-shadow: 0 0 0;
+                border-color: #ECECEC;
+                color: #454A4D;
+                font-size: 16px;
+                line-height: 2;
+                padding: 6px 14px;
+                border-radius: 8px;
+                height: auto;
+                padding-left: 66px;
+                &::placeholder {
+                    color: currentColor;
+                    right: 0 !important;
+                }
+            }
+        }
+    }
+    &-receiver {
+        --img-width: 50px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-bottom: 20px;
+        width: max-content;
+        max-width: 75%;
+        @include xxl {
+            max-width: 90%;
+        }
+        @include xl {
+            max-width: 90%;
+            --img-width: 40px;
+        }
+        @include lg {
+            max-width: 100%;
+            --img-width: 40px;
+        }
+        @include mmd {
+            --img-width: 40px;
+        }
+        @include sm {
+            max-width: 90%;
+        }
+        &-img {
+            width: var(--img-width);
+            flex: 0 0 auto;
+            height: var(--img-width);
+            border-radius: 100%;
+            overflow: hidden;
+            position: relative;
+            z-index: 1;
+            box-shadow: inset 0px 0px 3px rgba(0, 0, 0, 0.1);
+            & img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: -1;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        &-content {
+            width: calc(100% - var(--img-width) - 8px);
+            flex: 0 0 auto;
+            padding: 10px;
+            padding-top: 7px;
+            background-color: var(--base_color);
+            color: $white;
+            border-radius: 11px;
+            border-top-right-radius: 0;
+            & p,
+            & a {
+                color: currentColor;
+                font-size: 14px;
+                line-height: calc(18px/14px);
+                &:not(:last-child) {
+                    margin-bottom: 5px;
+                }
+            }
+            & a {
+                text-decoration: underline !important;
+                margin-right: 4px;
+            }
+        }
+        &-head {
+            margin-bottom: 10px;
+            & span {
+                color: #F0FBFD;
+                font-size: 12px;
+            }
+            & strong {
+                font-size: 14px;
+            }
+        }
+    }
+    &-sender {
+        text-align: right;
+        padding: 10px;
+        padding-right: 17px;
+        background-color: #454A4C;
+        color: $white;
+        border-radius: 11px;
+        border-top-left-radius: 0;
+        margin-right: auto;
+        width: max-content;
+        max-width: 69%;
+        margin-bottom: 20px;
+        @include xxl {
+            max-width: 85%;
+        }
+        @include xl {
+            max-width: 85%;
+        }
+        @include lg {
+            max-width: 95%;
+        }
+        @include sm {
+            max-width: 85%;
+        }
+        & p,
+        & a {
+            color: currentColor;
+            margin-bottom: 8px;
+            font-size: 14px;
+            line-height: calc(18px/14px);
+        }
+        & a {
+            text-decoration: underline !important;
+            margin-left: 4px;
+        }
+        & span {
+            color: currentColor;
+            font-size: 10px;
+            line-height: 1;
+            display: block;
+        }
+    }
+    // full page for customer
+    &-left {
+        width: calc(100% / 12 * 3);
+        flex: 0 0 auto;
+        padding: var(--padding) 0;
+        @include xxl {
+            width: calc(100% / 12 * 4);
+        }
+        @include xl {
+            width: calc(100% / 12 * 3.5);
+        }
+        @include lg {
+            width: calc(100% / 12 * 5.5);
+        }
+        @include md {
+            width: calc(100% / 12 * 4.5);
+        }
+        @include sm {
+            width: 100%;
+        }
+    }
+    &-center {
+        width: calc(100% / 12 * 6);
+        flex: 0 0 auto;
+        background-color: #fff;
+        @include xxl {
+            width: calc(100% / 12 * 5);
+        }
+        @include xl {
+            width: calc(100% / 12 * 5.5);
+        }
+        @include lg {
+            width: calc(100% / 12 * 6.5);
+        }
+        @include md {
+            width: calc(100% / 12 * 7.5);
+        }
+    }
+    & #mobile_popup {
+        @include sm {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            z-index: 99999;
+            background-color: #fff;
+            display: none;
+        }
+    }
+    &-right {
+        width: calc(100% / 12 * 3);
+        flex: 0 0 auto;
+        padding: var(--padding);
+        @include lg {
+            display: none;
+        }
+        @include mmd {
+            display: none;
+        }
+    }
+    &-lists {
+        overflow: auto;
+        padding-left: 20px;
+        padding-right: 10px;
+        @include xl {
+            padding-right: 0;
+            padding-left: 10px;
+        }
+        @include mmd {
+            padding-right: 0;
+            padding-left: 10px;
+        }
+        & h5 {
+            font-size: 18px;
+            line-height: 1;
+            margin-bottom: 20px;
+            padding-right: 20px;
+        }
+        & .pinded {
+            max-height: 270px;
+            overflow: auto;
+            margin-bottom: 40px;
+            padding-right: 20px;
+            @include md {
+                margin-bottom: 30px;
+                max-height: 200px;
+            }
+            @include sm {
+                margin-bottom: 30px;
+                max-height: 230px;
+            }
+            & .chat-list {
+                background-color: var(--base_color);
+                color: #fff;
+                & p,
+                & strong {
+                    color: #fff !important;
+                }
+                &-content {
+                    & p {
+                        opacity: .8;
+                    }
+                }
+                &-right {
+                    & .badge {
+                        background-color: rgba($color: #000000, $alpha: .40) !important;
+                    }
+                }
+            }
+        }
+        & .regular {
+            padding-right: 20px;
+            max-height: 480px;
+            overflow: auto;
+            @include md {
+                max-height: 400px;
+            }
+            @include sm {
+                max-height: 504px;
+            }
+        }
+    }
+    &-conversions {
+        overflow: auto;
+        padding: var(--padding);
+        padding-bottom: 0 !important;
+        max-height: 844px;
+        @include xxl {
+            height: calc(100vh - 6px);
+        }
+        @include lg {
+            padding: 20px;
+        }
+        @include md {
+            height: 674px;
+        }
+    }
+    &-list {
+        --img-width: 40px;
+        background-color: #fff;
+        margin-bottom: 12px;
+        border-radius: 6px;
+        padding: 12px 15px;
+        margin-left: 10px;
+        position: relative;
+        z-index: 1;
+        @media (min-width: 1581px) {
+            --img-width: 50px;
+        }
+        @include md {
+            --img-width: 36px;
+            padding: 8px 10px;
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
+        &-pinded {
+            --width: 23px;
+            width: var(--width);
+            height: var(--width);
+            border-radius: 100%;
+            background-color: #454A4D;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 15px;
+            right: calc(var(--width) / 2 * -1);
+            font-size: 12px;
+            transform: rotate(45deg);
+            @include md {
+                --width: 18px;
+                font-size: 8px;
+            }
+        }
+        &-right {
+            flex: 0 0 auto;
+            & p {
+                font-size: 14px;
+                font-weight: 500;
+                line-height: 1;
+                @include md {
+                    font-size: 12px;
+                }
+            }
+            & .badge {
+                --width: 20px;
+                padding: 0;
+                width: var(--width);
+                height: var(--width);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 14px;
+                border-radius: 100%;
+                margin-top: 10px;
+                @include md {
+                    margin-top: 5px;
+                    font-size: 12px;
+                }
+            }
+        }
+        &-user {
+            width: var(--img-width);
+            height: var(--img-width);
+            flex: 0 0 auto;
+            border-radius: 100%;
+            border: 1px solid #CDDDE0;
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+            & img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: -1;
+            }
+        }
+        &-content {
+            width: calc(100% - var(--img-width));
+            flex: 0 0 auto;
+            padding-right: 14px;
+            @media (min-width: 768px) and (max-width: 1439px) {
+                padding-right: 8px;
+            }
+            & strong {
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 1;
+                display: block;
+                margin-bottom: 6px;
+                color: #454A4D;
+                @include xl {
+                    font-size: 16px;
+                    margin-bottom: 3px;
+                }
+                @include lg {
+                    font-size: 16px;
+                    margin-bottom: 3px;
+                }
+                @include md {
+                    font-size: 16px;
+                    margin-bottom: 3px;
+                }
+            }
+            & p {
+                font-size: 14px;
+                line-height: 1;
+                color: #454A4D;
+                opacity: .60;
+                @include text_ellipsis(1);
+                @include xl {
+                    font-size: 12px;
+                }
+                @include lg {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+    &-user {
+        background-color: var(--base_color);
+        color: $white;
+        padding: 10px;
+        border-radius: 7px;
+        margin-bottom: 36px;
+        --width: 40px;
+        overflow: hidden;
+        &-head {
+            margin-bottom: 20px;
+            &>div {
+                &:last-child {
+                    flex: 0 0 auto;
+                }
+            }
+        }
+        &-img {
+            flex: 0 0 auto;
+            width: var(--width);
+            height: var(--width);
+            border-radius: 100%;
+            overflow: hidden;
+            position: relative;
+            z-index: 1;
+            & img {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: -1;
+            }
+        }
+        &-content {
+            flex: 0 0 auto;
+            width: calc(100% - var(--width));
+            padding-right: 5px;
+            & h6 {
+                font-weight: 500;
+                @include text_ellipsis(1);
+            }
+            & p {
+                font-size: 12px !important;
+                line-height: 14px !important;
+            }
+        }
+        & p {
+            font-size: 14px;
+            &:not(:last-child) {
+                margin-bottom: 6px;
+                @media (min-width: 1581px) {
+                    margin-bottom: 14px;
+                }
+            }
+            & a {
+                color: currentColor;
+                @include text_ellipsis(1);
+                margin-right: 4px;
+                @media (min-width: 1581px) {
+                    margin-right: 16px;
+                }
+            }
+        }
+    }
+}
+
+.order {
+    &-wrap {
+        @media (min-width: 1581px) {
+            padding-right: 20px;
+        }
+        & h6 {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 18px;
+        }
+    }
+    &-list {
+        --img: 39px;
+        background-color: #fff;
+        padding: 8px;
+        border-radius: 4px;
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
+        & .img {
+            width: var(--img);
+            height: var(--img);
+            flex: 0 0 auto;
+            border-radius: 6px;
+            border: 1px solid #A9ACB7;
+            overflow: hidden;
+            position: relative;
+            z-index: 1;
+            & img {
+                width: 100%;
+                height: auto;
+                object-fit: contain;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: -1;
+            }
+        }
+        & .content {
+            padding-right: 12px;
+            width: calc(100% - var(--img));
+            flex: 0 0 auto;
+            & p {
+                color: #46575F;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 1.5;
+                @include text_ellipsis(1);
+            }
+        }
+    }
+    &-info {
+        border-radius: 6px;
+        padding: 0 20px;
+        margin-top: 20px;
+        & table {
+            border-collapse: separate;
+            border-spacing: 0 1rem;
+            @include xl {
+                border-spacing: 0 10px;
+            }
+            & td {
+                color: #454A4D;
+                font-size: 14px;
+                font-weight: 500;
+                &:last-child {
+                    color: #657480;
+                }
+                &:nth-child(2) {
+                    padding: 0 10px;
+                }
+            }
+        }
+    }
+}
